@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://${MONGODB_HOST:127.0.0.1}:27017/blog
+      username: ${MONGODB_USERNAME:admin}
+      password: ${MONGODB_PASSWORD:admin}
