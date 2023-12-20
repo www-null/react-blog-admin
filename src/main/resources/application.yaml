@@ -4,3 +4,22 @@ spring:
       uri: mongodb://${MONGODB_HOST:127.0.0.1}:27017/blog
       username: ${MONGODB_USERNAME:admin}
       password: ${MONGODB_PASSWORD:admin}
+
+
+  graphql:
+    path: /graphql
+    graphiql:
+      enabled: true
+      path: /graphiql
+    cors:
+      allow-credentials: true
+      allowed-headers: '*'
+      allowed-methods: '*'
+    schema:
+      locations:
+        - classpath*:graphql/**/
+      file-extensions:
+        - .graphqls
+        - .gqls
+      printer:
+        enabled: true
